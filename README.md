@@ -99,21 +99,6 @@ bisect-ppx-report html
 
 Open _coverage/index.html to view the report.
 
-## 📂 Project Structure
-
-├── bin/
-│   ├── main.ml         # Client Entry Point (GUI)
-│   └── run_server.ml   # Server Entry Point (Network Loops)
-├── lib/
-│   ├── backend/
-│   │   ├── document.ml # Core Logic (Sync & Cursor Math)
-│   │   └── server.ml   # Server State & Protocol Logic
-│   ├── frontend/       # GUI Layout & Networking
-│   └── spec_actions.ml # Frontend Data Structures
-├── test/
-│   ├── test_team_proj.ml # Main Logic Tests
-│   └── test_server.ml    # Protocol & Parsing Tests
-└── data/                 # Storage for saved documents
 
 
 ## 👥 Contributors
