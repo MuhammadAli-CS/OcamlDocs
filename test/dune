@@ -1,0 +1,43 @@
+(test
+ (name test_document)
+ (modules test_document)
+ (libraries ounit2 lib backend shared))
+
+(test
+ (name test_server_protocol)
+ (modules test_server_protocol)
+ (libraries ounit2 lib backend shared))
+
+(test
+ (name test_events)
+ (modules test_events)
+ (libraries ounit2 lib backend shared))
+
+(test
+ (name test_integration)
+ (modules test_integration)
+ (libraries ounit2 lib backend shared))
+
+(test
+ (name test_edge_cases)
+ (modules test_edge_cases)
+ (libraries ounit2 lib backend shared))
+
+(test
+ (name test_cursor)
+ (modules test_cursor)
+ (libraries ounit2 lib backend shared))
+
+(test
+ (name test_server)
+ (modules test_server)
+ (libraries ounit2 lib backend shared))
+
+(executable
+ (name test_wrap)
+ (modules test_wrap))
+
+(cram
+ (deps
+  ../bin/main.exe
+  (glob_files_rec ../data/*)))

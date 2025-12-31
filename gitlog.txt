@@ -1,0 +1,1112 @@
+* 87bf708 2025-12-05 17:28 EST FINAL- client server sperated| 
+|  INSTALL.md             |   7 ++-
+|  bin/dune               |  10 +++-
+|  bin/main.ml            |  21 +------
+|  bin/run_server.ml      | 138 +++++++++++++++++++++++++++++++++++++++++++
+|  lib/backend/server.ml  | 149 +----------------------------------------------
+|  lib/backend/server.mli |  29 ++-------
+|  6 files changed, 160 insertions(+), 194 deletions(-)
+
+* a02aeae 2025-12-05 16:21 EST final submission thing| 
+|  .gitignore | 3 ++-
+|  1 file changed, 2 insertions(+), 1 deletion(-)
+
+* 696c786 2025-12-05 15:08 EST another test file for server| 
+|  test/dune           | 29 +++++++++++----------------
+|  test/test_server.ml | 55 +++++++++++++++++++++++++++++++++++++++++++++++++++
+|  2 files changed, 66 insertions(+), 18 deletions(-)
+
+* 9b3d1eb 2025-12-04 22:26 EST Migrated frontend to bin| 
+|  {lib => bin}/frontend/dune         | 0
+|  {lib => bin}/frontend/frontend.ml  | 0
+|  {lib => bin}/frontend/frontend.mli | 0
+|  3 files changed, 0 insertions(+), 0 deletions(-)
+
+* 7176786 2025-12-04 22:17 EST Created Data directory for file saving| 
+|  MS3 Submission/MS3 Report.pdf:Zone.Identifier | Bin 25 -> 0 bytes
+|  1 file changed, 0 insertions(+), 0 deletions(-)
+
+* 7b33ae3 2025-12-04 22:13 EST MS3 submission mostly done| 
+|  MS3 Submission/MS3 Report.pdf                 | Bin 0 -> 84268 bytes
+|  MS3 Submission/MS3 Report.pdf:Zone.Identifier | Bin 0 -> 25 bytes
+|  MS3 Submission/gallery.yaml                   |   2 +-
+|  3 files changed, 1 insertion(+), 1 deletion(-)
+
+*   6d3b3f8 2025-12-04 21:59 EST Merge branch 'main' of github.coecis.cornell.edu:rl896/cs3110-project
+|\  
+| * 2bfe8e2 2025-12-04 21:57 EST fix theme coloring mistake and change connection to a button to match theme| | 
+| |  lib/frontend/frontend.ml     |  15 +-
+| |  test/test_cursor.ml          | 335 ++++++++++++++++++------------------
+| |  test/test_document.ml        | 296 +++++++++++++++++---------------
+| |  test/test_edge_cases.ml      |   4 +-
+| |  test/test_events.ml          | 356 ++++++++++++++++++++-------------------
+| |  test/test_integration.ml     | 343 ++++++++++++++++++++-----------------
+| |  test/test_server_protocol.ml | 154 +++++++++--------
+| |  7 files changed, 803 insertions(+), 700 deletions(-)
+
+* | 4b65ea6 2025-12-04 21:58 EST ms3 sub folder added
+|/  |   
+|    MS3 Submission/RepoURL.txt  |  1 +
+|    MS3 Submission/gallery.yaml | 29 +++++++++++++++++++++++++++++
+|    2 files changed, 30 insertions(+)
+
+*   24a309c 2025-12-04 21:52 EST Merge branch 'main' of github.coecis.cornell.edu:rl896/cs3110-project
+|\  
+| *   c831ed2 2025-12-04 21:49 EST Merge branch 'main' of github.coecis.cornell.edu:rl896/cs3110-project
+| |\  
+| * \   8609d79 2025-12-04 21:48 EST Merge branch 'main' of github.coecis.cornell.edu:rl896/cs3110-project
+| |\ \  
+| * | | a5dd70c 2025-12-04 21:48 EST Implemented themes| | | | 
+| | | |  lib/frontend/frontend.ml | 40 +++++++++++++++++++++++++++++++++++++++-
+| | | |  1 file changed, 39 insertions(+), 1 deletion(-)
+
+* | | | 0f20e45 2025-12-04 21:52 EST server.mli edits
+| |_|/  
+|/| |   | | |   
+| | |    lib/backend/server.mli | 82 +++++++++++++++++++++---------------------
+| | |    1 file changed, 40 insertions(+), 42 deletions(-)
+
+* | |   b3769ab 2025-12-04 21:48 EST Merge branch 'main' of github.coecis.cornell.edu:rl896/cs3110-project
+|\ \ \  
+| | |/  
+| |/|   
+| * | 52ddcea 2025-12-04 21:42 EST fix AF and RI to represent the intended final abstraction| | | 
+| | |  lib/backend/document.mli | 10 +++++++---
+| | |  lib/frontend/frontend.ml |  1 -
+| | |  lib/shared/events.ml     |  4 ++--
+| | |  lib/shared/events.mli    |  1 -
+| | |  4 files changed, 9 insertions(+), 7 deletions(-)
+
+* | | 4fbdea1 2025-12-04 21:48 EST adding ri and af
+|/ /  | |   
+| |    lib/backend/server.ml     | 13 -------------
+| |    lib/frontend/frontend.mli | 22 ++++++++++++++++------
+| |    lib/shared/dune           |  2 --
+| |    lib/shared/events.ml      |  4 ++--
+| |    lib/shared/events.mli     |  1 -
+| |    5 files changed, 18 insertions(+), 24 deletions(-)
+
+* | 2dded0e 2025-12-04 21:36 EST rep inv added to client state| | 
+| |  lib/frontend/frontend.mli | 27 ++++++++++++++-------------
+| |  1 file changed, 14 insertions(+), 13 deletions(-)
+
+* | 11354df 2025-12-04 21:00 EST git ignore changes| | 
+| |  .gitignore | 2 +-
+| |  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* |   66b8bf7 2025-12-04 20:57 EST Merge remote changes and resolve .gitignore conflict
+|\ \  
+| * | 012c191 2025-12-04 20:52 EST removed fonts folder| | | 
+| | |  data/fonts/Zalando Sans Semi/OFL.txt            |  93 ------------------
+| | |  .../Zalando Sans Semi/OFL.txt:Zone.Identifier   | Bin 93 -> 0 bytes
+| | |  .../OFL.txt\357\200\272Zone.Identifier"         | Bin 93 -> 0 bytes
+| | |  data/fonts/Zalando Sans Semi/README.txt         |  79 ---------------
+| | |  .../README.txt:Zone.Identifier                  | Bin 93 -> 0 bytes
+| | |  .../README.txt\357\200\272Zone.Identifier"      | Bin 93 -> 0 bytes
+| | |  .../static/ZalandoSansSemiExpanded-Italic.ttf   | Bin 67488 -> 0 bytes
+| | |  ...oSansSemiExpanded-Italic.ttf:Zone.Identifier | Bin 93 -> 0 bytes
+| | |  ...anded-Italic.ttf\357\200\272Zone.Identifier" | Bin 93 -> 0 bytes
+| | |  .../static/ZalandoSansSemiExpanded-Medium.ttf   | Bin 65708 -> 0 bytes
+| | |  ...oSansSemiExpanded-Medium.ttf:Zone.Identifier | Bin 93 -> 0 bytes
+| | |  ...anded-Medium.ttf\357\200\272Zone.Identifier" | Bin 93 -> 0 bytes
+| | |  .../static/ZalandoSansSemiExpanded-SemiBold.ttf | Bin 65520 -> 0 bytes
+| | |  ...ansSemiExpanded-SemiBold.ttf:Zone.Identifier | Bin 93 -> 0 bytes
+| | |  ...ded-SemiBold.ttf\357\200\272Zone.Identifier" | Bin 93 -> 0 bytes
+| | |  .../ZalandoSansSemiExpanded-SemiBoldItalic.ttf  | Bin 67584 -> 0 bytes
+| | |  ...iExpanded-SemiBoldItalic.ttf:Zone.Identifier | Bin 93 -> 0 bytes
+| | |  ...miBoldItalic.ttf\357\200\272Zone.Identifier" | Bin 93 -> 0 bytes
+| | |  18 files changed, 172 deletions(-)
+
+| * |   83d7fde 2025-12-04 20:49 EST Merge branch 'main' of github.coecis.cornell.edu:rl896/cs3110-project
+| |\ \  
+| * | | 22cf539 2025-12-04 20:49 EST mli file for server and change to name and directory for save file| | | | 
+| | | |  .gitignore             |  3 +-
+| | | |  lib/backend/server.ml  |  2 +-
+| | | |  lib/backend/server.mli | 90 ++++++++++++++++++++++++++++++++++++++++++
+| | | |  3 files changed, 93 insertions(+), 2 deletions(-)
+
+* | | | ab6c5a7 2025-12-04 20:56 EST deleted git_log document that came out of nowhere
+| |/ /  
+|/| |   | | |   
+| | |    .gitignore             |   2 +-
+| | |    build_log.txt          | Bin 2472 -> 0 bytes
+| | |    test/server_basic.t    |  17 -----------------
+| | |    test/server_protocol.t |  19 -------------------
+| | |    4 files changed, 1 insertion(+), 37 deletions(-)
+
+* | | db072b0 2025-12-04 20:45 EST Improve code quality and test coverage
+|/ /  | |   
+| |    test/dune              |   7 --
+| |    test/server_basic.t    |  17 +++++
+| |    test/server_protocol.t |  19 ++++++
+| |    test/test_team_proj.ml | 152 -------------------------------------------
+| |    4 files changed, 36 insertions(+), 159 deletions(-)
+
+* | 02e9967 2025-12-04 20:31 EST fixed minor typos| | 
+| |  lib/backend/server.ml | 2 +-
+| |  lib/shared/events.ml  | 3 +--
+| |  2 files changed, 2 insertions(+), 3 deletions(-)
+
+* |   e446448 2025-12-04 20:20 EST Merge remote changes and remove documenthashtbl.txt
+|\ \  
+| * | 2e9e1b7 2025-12-04 20:08 EST Fixed merge conflicts
+| |\| 
+| | *   02385b0 2025-12-04 19:52 EST attempt
+| | |\  
+| | * | 8e761ed 2025-12-04 19:49 EST Revised the Layout| | | | 
+| | | |  AUTHORS.md               |  8 +-------
+| | | |  lib/backend/server.ml    |  3 ++-
+| | | |  lib/frontend/frontend.ml | 39 ++++++++++++++++++++++++---------------
+| | | |  3 files changed, 27 insertions(+), 23 deletions(-)
+
+| * | | 949a30b 2025-12-04 19:54 EST added document.mli| | | | 
+| | | |  documenthashtbl.txt               |  2 +-
+| | | |  lib/backend/document.mli          | 40 +++++++++++++++++++++++++++++++
+| | | |  lib/backend/server.ml             | 10 ++++----
+| | | |  lib/spec_actions/spec_actions.mli |  5 ----
+| | | |  4 files changed, 45 insertions(+), 12 deletions(-)
+
+* | | | 97db68c 2025-12-04 20:17 EST Remove documenthashtbl.txt| | | | 
+| | | |  documenthashtbl.txt | 1 -
+| | | |  1 file changed, 1 deletion(-)
+
+* | | | efc61b2 2025-12-04 20:13 EST Add comprehensive OUnit test suite with 197 test cases
+| |_|/  
+|/| |   | | |   
+| | |    test/dune                    |  47 ++++
+| | |    test/test_cursor.ml          | 427 ++++++++++++++++++++++++++++++++
+| | |    test/test_document.ml        | 444 +++++++++++++++++++++++++++++++++
+| | |    test/test_edge_cases.ml      | 463 +++++++++++++++++++++++++++++++++++
+| | |    test/test_events.ml          | 365 +++++++++++++++++++++++++++
+| | |    test/test_integration.ml     | 350 ++++++++++++++++++++++++++
+| | |    test/test_server_protocol.ml | 313 +++++++++++++++++++++++
+| | |    7 files changed, 2409 insertions(+)
+
+* | | a2034b8 2025-12-04 19:33 EST merge commit| | | 
+| | |  lib/frontend/frontend.ml | 80 +++++++++++++++++++++---------------------
+| | |  1 file changed, 40 insertions(+), 40 deletions(-)
+
+* | |   5f71adf 2025-12-04 19:31 EST Merge branch 'main' of github.coecis.cornell.edu:rl896/cs3110-project
+|\ \ \  
+| | |/  
+| |/|   
+| * | 709737f 2025-12-04 19:30 EST deleted two files that werent in use| | | 
+| | |  lib/frontend/styled_display.ml |  30 ----------
+| | |  lib/frontend/text_parser.ml    | 103 -----------------------------------
+| | |  2 files changed, 133 deletions(-)
+
+* | | 67fa260 2025-12-04 19:25 EST Merge branch 'main' of github.coecis.cornell.edu:rl896/cs3110-project
+|\| | 
+| * | d94130b 2025-12-04 19:18 EST Implement alignment synchronization across multiple clients| | | 
+| | |  lib/backend/document.ml  |  4 +++-
+| | |  lib/backend/server.ml    | 14 ++++++++++----
+| | |  lib/frontend/frontend.ml | 12 ++++++++++++
+| | |  lib/shared/events.ml     |  2 ++
+| | |  lib/shared/events.mli    |  2 ++
+| | |  5 files changed, 29 insertions(+), 5 deletions(-)
+
+* | | 851e946 2025-12-04 19:25 EST added cursor on text display
+|/ /  | |   
+| |    lib/frontend/frontend.ml | 148 ++++++++++++++++++++++++++++++++++-------
+| |    1 file changed, 125 insertions(+), 23 deletions(-)
+
+* / 658012d 2025-12-04 19:21 EST Cut some code
+|/  |   
+|    lib/spec_actions/dune             |   3 -
+|    lib/spec_actions/spec_actions.ml  | 130 ----------------------------------
+|    lib/spec_actions/spec_actions.mli |  31 --------
+|    test/test_wrap.ml                 |  20 ++++--
+|    4 files changed, 13 insertions(+), 171 deletions(-)
+
+* 2084699 2025-12-04 19:14 EST file saving done| 
+|  documenthashtbl.txt              |  1 +
+|  lib/backend/server.ml            | 70 ++++++++++++++++++++++++++------------
+|  lib/spec_actions/spec_actions.ml | 41 ----------------------
+|  3 files changed, 50 insertions(+), 62 deletions(-)
+
+* 105eaee 2025-12-04 18:41 EST Stop tracking _coverage folder| 
+|  _coverage/coverage.css                 | 500 -------------------------------
+|  _coverage/coverage.js                  | 164 ----------
+|  _coverage/highlight.pack.js            |   2 -
+|  _coverage/index.html                   |  35 ---
+|  _coverage/lib/backend/document.ml.html | 395 ------------------------
+|  _coverage/test/test_team_proj.ml.html  | 493 ------------------------------
+|  6 files changed, 1589 deletions(-)
+
+* b0bfad9 2025-12-04 18:39 EST fixed merge break error| 
+|  .gitignore                             |   4 +-
+|  _coverage/index.html                   |  12 +-
+|  _coverage/lib/backend/document.ml.html |  52 ++--
+|  _coverage/test/test_team_proj.ml.html  | 392 ++++++++++++++++++++++++-------
+|  lib/dune                               |   5 +
+|  5 files changed, 344 insertions(+), 121 deletions(-)
+
+* a365e3d 2025-12-04 18:30 EST ignore coverage folder| 
+|  .gitignore                                               |   3 ++-
+|  data/fonts/Zalando Sans Semi/OFL.txt:Zone.Identifier     | Bin 0 -> 93 bytes
+|  data/fonts/Zalando Sans Semi/README.txt:Zone.Identifier  | Bin 0 -> 93 bytes
+|  .../ZalandoSansSemiExpanded-Italic.ttf:Zone.Identifier   | Bin 0 -> 93 bytes
+|  .../ZalandoSansSemiExpanded-Medium.ttf:Zone.Identifier   | Bin 0 -> 93 bytes
+|  .../ZalandoSansSemiExpanded-SemiBold.ttf:Zone.Identifier | Bin 0 -> 93 bytes
+|  ...doSansSemiExpanded-SemiBoldItalic.ttf:Zone.Identifier | Bin 0 -> 93 bytes
+|  test/dune                                                |   2 +-
+|  8 files changed, 3 insertions(+), 2 deletions(-)
+
+*   7216b2a 2025-12-04 18:28 EST Merge branch 'main' of github.coecis.cornell.edu:rl896/cs3110-project
+|\  
+| * 8148d87 2025-12-04 18:08 EST changed name of backend.ml within server.ml to server.ml(essentially fixing a typo| | 
+| |  lib/backend/server.ml | 2 +-
+| |  1 file changed, 1 insertion(+), 1 deletion(-)
+
+| * c020a8f 2025-12-04 18:05 EST fixed real-time text sync(i was the one who broke it) and improved alignment functionality| | 
+| |  build.sh                  |   3 -
+| |  build_log.txt             | Bin 624 -> 2472 bytes
+| |  lib/frontend/frontend.ml  | 135 +++++++++++++++++++++++++++++++++++-------
+| |  lib/frontend/frontend.mli |   9 +--
+| |  test.sh                   |   3 -
+| |  test/test_wrap.ml         |  38 ++++++++++++
+| |  6 files changed, 156 insertions(+), 32 deletions(-)
+
+| * 51f98eb 2025-12-04 15:30 EST Implement cursor synchronization, fix build system, and add tests| | 
+| |  .../OFL.txt\357\200\272Zone.Identifier"                 | Bin
+| |  .../README.txt\357\200\272Zone.Identifier"              | Bin
+| |  ...sSemiExpanded-Italic.ttf\357\200\272Zone.Identifier" | Bin
+| |  ...sSemiExpanded-Medium.ttf\357\200\272Zone.Identifier" | Bin
+| |  ...emiExpanded-SemiBold.ttf\357\200\272Zone.Identifier" | Bin
+| |  ...anded-SemiBoldItalic.ttf\357\200\272Zone.Identifier" | Bin
+| |  test/dune                                               |   8 --------
+| |  7 files changed, 8 deletions(-)
+
+| * 9d676b1 2025-12-04 15:02 EST Implement cursor synchronization, fix build system, and add tests| | 
+| |  test/dune | 8 ++++++++
+| |  1 file changed, 8 insertions(+)
+
+| * 9601390 2025-12-04 14:56 EST Implement cursor synchronization, fix build system, and add tests| | 
+| |  bin/main.ml                           |   2 +-
+| |  build.sh                              |   3 +
+| |  build_log.txt                         |  35 ++++++++++
+| |  lib/backend/{backend.ml => server.ml} |  37 +++++++---
+| |  lib/dune                              |   5 --
+| |  lib/frontend/frontend.ml              | 111 +++++++++++++++++++++++-------
+| |  lib/frontend/frontend.mli             |  11 ++-
+| |  lib/shared/events.ml                  |   1 +
+| |  lib/shared/events.mli                 |   1 +
+| |  test.sh                               |   3 +
+| |  test/dune                             |   2 +-
+| |  test/test_team_proj.ml                |  68 ++++++++++++++++++
+| |  12 files changed, 235 insertions(+), 44 deletions(-)
+
+* | ce2fcf2 2025-12-04 18:14 EST working on tests
+|/  |   
+|    _coverage/coverage.css                 | 500 +++++++++++++++++++++++++++++
+|    _coverage/coverage.js                  | 164 ++++++++++
+|    _coverage/highlight.pack.js            |   2 +
+|    _coverage/index.html                   |  35 ++
+|    _coverage/lib/backend/document.ml.html | 395 +++++++++++++++++++++++
+|    _coverage/test/test_team_proj.ml.html  | 275 ++++++++++++++++
+|    lib/backend/backend.ml                 |   1 +
+|    lib/backend/dune                       |   4 +-
+|    lib/shared/dune                        |   4 +-
+|    test/dune                              |   4 +-
+|    test/test_team_proj.ml                 |  80 +++++
+|    11 files changed, 1461 insertions(+), 3 deletions(-)
+
+* 112ee3a 2025-12-04 14:49 EST changes to mli to reflect changes to ml for spec_actions| 
+|  lib/dune                          |  6 ++++--
+|  lib/spec_actions/spec_actions.mli | 16 ++++++++++++++--
+|  test/dune                         |  4 ++--
+|  3 files changed, 20 insertions(+), 6 deletions(-)
+
+* ec3e889 2025-12-04 14:29 EST backspace fix for length 0| 
+|  lib/spec_actions/spec_actions.ml | 7 +++++--
+|  1 file changed, 5 insertions(+), 2 deletions(-)
+
+* b49e75f 2025-12-04 14:27 EST saving hashtbls implemented| 
+|  lib/spec_actions/spec_actions.ml | 60 ++++++++++++++++++++++++++++++++++----
+|  1 file changed, 55 insertions(+), 5 deletions(-)
+
+* ff5692e 2025-12-04 00:51 EST Implement safer text wrapping in frontend: use fixed-size Bogue.Widget.text_display (~w:600 ~h:300) with non-empty initial/updated text (map empty docs to a single space in receive_updates), remove the background input diff thread in favor of the Send Text button as the sole client to server path, and keep alignment handled at the layout level (Layout.tower) with no backend or protocol changes| 
+|  lib/dune                          |  2 +-
+|  lib/frontend/dune                 |  3 +-
+|  lib/frontend/frontend.ml          | 63 +++++++++++++++++--------------------
+|  lib/spec_actions/spec_actions.ml  |  8 +++++
+|  lib/spec_actions/spec_actions.mli |  4 +++
+|  5 files changed, 44 insertions(+), 36 deletions(-)
+
+* b8e84cc 2025-12-02 17:08 EST Touched up on bolding, italicizing, and deletion to be more efficiently implemented; smoothed up other code in spec_actions| 
+|  .../fonts/Zalando Sans Semi/OFL.txt               |   0
+|  .../Zalando Sans Semi/OFL.txt:Zone.Identifier     | Bin
+|  .../fonts/Zalando Sans Semi/README.txt            |   0
+|  .../Zalando Sans Semi/README.txt:Zone.Identifier  | Bin
+|  .../static/ZalandoSansSemiExpanded-Italic.ttf     | Bin
+|  ...ndoSansSemiExpanded-Italic.ttf:Zone.Identifier | Bin
+|  .../static/ZalandoSansSemiExpanded-Medium.ttf     | Bin
+|  ...ndoSansSemiExpanded-Medium.ttf:Zone.Identifier | Bin
+|  .../static/ZalandoSansSemiExpanded-SemiBold.ttf   | Bin
+|  ...oSansSemiExpanded-SemiBold.ttf:Zone.Identifier | Bin
+|  .../ZalandoSansSemiExpanded-SemiBoldItalic.ttf    | Bin
+|  ...emiExpanded-SemiBoldItalic.ttf:Zone.Identifier | Bin
+|  ...oSansSemiExpanded-Italic-VariableFont_wght.ttf | Bin 129960 -> 0 bytes
+|  ...d-Italic-VariableFont_wght.ttf:Zone.Identifier | Bin 93 -> 0 bytes
+|  .../ZalandoSansSemiExpanded-VariableFont_wght.ttf | Bin 126352 -> 0 bytes
+|  ...Expanded-VariableFont_wght.ttf:Zone.Identifier | Bin 93 -> 0 bytes
+|  .../static/ZalandoSansSemiExpanded-Black.ttf      | Bin 65448 -> 0 bytes
+|  ...andoSansSemiExpanded-Black.ttf:Zone.Identifier | Bin 93 -> 0 bytes
+|  .../ZalandoSansSemiExpanded-BlackItalic.ttf       | Bin 67440 -> 0 bytes
+|  ...nsSemiExpanded-BlackItalic.ttf:Zone.Identifier | Bin 93 -> 0 bytes
+|  .../static/ZalandoSansSemiExpanded-Bold.ttf       | Bin 65440 -> 0 bytes
+|  ...landoSansSemiExpanded-Bold.ttf:Zone.Identifier | Bin 93 -> 0 bytes
+|  .../static/ZalandoSansSemiExpanded-BoldItalic.ttf | Bin 67392 -> 0 bytes
+|  ...ansSemiExpanded-BoldItalic.ttf:Zone.Identifier | Bin 93 -> 0 bytes
+|  .../static/ZalandoSansSemiExpanded-ExtraBold.ttf  | Bin 65528 -> 0 bytes
+|  ...SansSemiExpanded-ExtraBold.ttf:Zone.Identifier | Bin 93 -> 0 bytes
+|  .../ZalandoSansSemiExpanded-ExtraBoldItalic.ttf   | Bin 67528 -> 0 bytes
+|  ...miExpanded-ExtraBoldItalic.ttf:Zone.Identifier | Bin 93 -> 0 bytes
+|  .../static/ZalandoSansSemiExpanded-ExtraLight.ttf | Bin 65636 -> 0 bytes
+|  ...ansSemiExpanded-ExtraLight.ttf:Zone.Identifier | Bin 93 -> 0 bytes
+|  .../ZalandoSansSemiExpanded-ExtraLightItalic.ttf  | Bin 66680 -> 0 bytes
+|  ...iExpanded-ExtraLightItalic.ttf:Zone.Identifier | Bin 93 -> 0 bytes
+|  .../static/ZalandoSansSemiExpanded-Light.ttf      | Bin 65760 -> 0 bytes
+|  ...andoSansSemiExpanded-Light.ttf:Zone.Identifier | Bin 93 -> 0 bytes
+|  .../ZalandoSansSemiExpanded-LightItalic.ttf       | Bin 67628 -> 0 bytes
+|  ...nsSemiExpanded-LightItalic.ttf:Zone.Identifier | Bin 93 -> 0 bytes
+|  .../ZalandoSansSemiExpanded-MediumItalic.ttf      | Bin 67688 -> 0 bytes
+|  ...sSemiExpanded-MediumItalic.ttf:Zone.Identifier | Bin 93 -> 0 bytes
+|  .../static/ZalandoSansSemiExpanded-Regular.ttf    | Bin 65760 -> 0 bytes
+|  ...doSansSemiExpanded-Regular.ttf:Zone.Identifier | Bin 93 -> 0 bytes
+|  lib/spec_actions/spec_actions.ml                  | 118 +++++++++-----------
+|  lib/spec_actions/spec_actions.mli                 |   2 +-
+|  42 files changed, 53 insertions(+), 67 deletions(-)
+
+* 99162ef 2025-11-25 01:08 EST modfiy frontend to immediately sent keystroke upon reception| 
+|  lib/frontend/frontend.ml  | 30 +++++++++++++++++++++++++++++
+|  lib/frontend/frontend.mli | 47 +++++++++++++++++++++++++++++++++++++++++++++
+|  2 files changed, 77 insertions(+)
+
+* a3cc0d2 2025-11-19 16:52 EST fix pdf not compiling| 
+|  MS2 Submission/MS2Report.pdf   | Bin 4437 -> 81750 bytes
+|  lib/frontend/styled_display.ml |  30 ++++++++++++
+|  lib/frontend/text_parser.ml    | 103 +++++++++++++++++++++++++++++++++++++++
+|  3 files changed, 133 insertions(+)
+
+* eafce06 2025-11-19 16:38 EST Added demo video| 
+|  MS2 Submission/gallery.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* a33b4db 2025-11-19 15:39 EST Report edited| 
+|  MS2 Submission/MS2Report.pdf | 14 +++++++++-----
+|  1 file changed, 9 insertions(+), 5 deletions(-)
+
+* 92053a6 2025-11-19 15:19 EST remove _build from repo and added it to .gitignore| 
+|  .gitignore                                        |   1 +
+|  _build/.db                                        | Bin 4101 -> 0 bytes
+|  _build/.digest-db                                 | Bin 130655 -> 0 bytes
+|  _build/.filesystem-clock                          |   1 -
+|  _build/.lock                                      |   0
+|  _build/.sandbox/.hg/requires                      |   1 -
+|  _build/default/.dune/configurator                 |   2 -
+|  _build/default/.dune/configurator.v2              |   1 -
+|  .../ccbf65260e40183e83faa06e3f5579a2/_ppx.ml-gen  |   1 -
+|  .../dune__exe___ppx.cmi                           | Bin 3703 -> 0 bytes
+|  .../dune__exe___ppx.cmo                           | Bin 5711 -> 0 bytes
+|  .../dune__exe___ppx.cmx                           | Bin 3728 -> 0 bytes
+|  .../dune__exe___ppx.o                             | Bin 1824 -> 0 bytes
+|  .../.ppx/ccbf65260e40183e83faa06e3f5579a2/ppx.exe | Bin 16071192 -> 0 bytes
+|  .../bin/.main.eobjs/byte/dune__exe__Main.cmi      | Bin 205 -> 0 bytes
+|  .../bin/.main.eobjs/byte/dune__exe__Main.cmti     | Bin 3664 -> 0 bytes
+|  .../bin/.main.eobjs/native/dune__exe__Main.cmx    | Bin 1739 -> 0 bytes
+|  .../bin/.main.eobjs/native/dune__exe__Main.o      | Bin 3624 -> 0 bytes
+|  _build/default/bin/.merlin-conf/exe-main          | Bin 2359 -> 0 bytes
+|  _build/default/bin/main.exe                       | Bin 6594360 -> 0 bytes
+|  _build/default/bin/main.ml                        |  22 ---
+|  _build/default/bin/main.pp.ml                     | Bin 3473 -> 0 bytes
+|  _build/default/bin/main.pp.mli                    |   1 -
+|  .../backend/.backend.objs/backend.impl.all-deps   |   1 -
+|  .../lib/backend/.backend.objs/backend.impl.d      |   1 -
+|  .../.backend.objs/backend__Document.impl.all-deps |   0
+|  .../.backend.objs/backend__Document.impl.d        |   1 -
+|  .../lib/backend/.backend.objs/byte/backend.cmi    | Bin 3391 -> 0 bytes
+|  .../lib/backend/.backend.objs/byte/backend.cmo    | Bin 26882 -> 0 bytes
+|  .../lib/backend/.backend.objs/byte/backend.cmt    | Bin 76337 -> 0 bytes
+|  .../lib/backend/.backend.objs/byte/backend__.cmi  | Bin 404 -> 0 bytes
+|  .../lib/backend/.backend.objs/byte/backend__.cmo  | Bin 2453 -> 0 bytes
+|  .../lib/backend/.backend.objs/byte/backend__.cmt  | Bin 3471 -> 0 bytes
+|  .../.backend.objs/byte/backend__Document.cmi      | Bin 1761 -> 0 bytes
+|  .../.backend.objs/byte/backend__Document.cmo      | Bin 13211 -> 0 bytes
+|  .../.backend.objs/byte/backend__Document.cmt      | Bin 38472 -> 0 bytes
+|  .../lib/backend/.backend.objs/native/backend.cmx  | Bin 1419 -> 0 bytes
+|  .../lib/backend/.backend.objs/native/backend.o    | Bin 22656 -> 0 bytes
+|  .../backend/.backend.objs/native/backend__.cmx    | Bin 129 -> 0 bytes
+|  .../lib/backend/.backend.objs/native/backend__.o  | Bin 1680 -> 0 bytes
+|  .../.backend.objs/native/backend__Document.cmx    | Bin 558 -> 0 bytes
+|  .../.backend.objs/native/backend__Document.o      | Bin 8528 -> 0 bytes
+|  .../default/lib/backend/.merlin-conf/lib-backend  | Bin 2333 -> 0 bytes
+|  _build/default/lib/backend/backend.a              | Bin 37008 -> 0 bytes
+|  _build/default/lib/backend/backend.cmxa           | Bin 2056 -> 0 bytes
+|  _build/default/lib/backend/backend.ml             | 199 --------------------
+|  _build/default/lib/backend/backend__.ml-gen       |   7 -
+|  _build/default/lib/backend/document.ml            | 117 ------------
+|  .../lib/frontend/.frontend.objs/byte/frontend.cmi | Bin 2370 -> 0 bytes
+|  .../lib/frontend/.frontend.objs/byte/frontend.cmo | Bin 20312 -> 0 bytes
+|  .../lib/frontend/.frontend.objs/byte/frontend.cmt | Bin 75062 -> 0 bytes
+|  .../frontend/.frontend.objs/native/frontend.cmx   | Bin 1292 -> 0 bytes
+|  .../lib/frontend/.frontend.objs/native/frontend.o | Bin 16800 -> 0 bytes
+|  .../lib/frontend/.merlin-conf/lib-frontend        | Bin 2284 -> 0 bytes
+|  _build/default/lib/frontend/frontend.a            | Bin 18688 -> 0 bytes
+|  _build/default/lib/frontend/frontend.cmxa         | Bin 1299 -> 0 bytes
+|  _build/default/lib/frontend/frontend.ml           | 137 --------------
+|  _build/default/lib/frontend/frontend.pp.ml        | Bin 26767 -> 0 bytes
+|  _build/default/lib/shared/.merlin-conf/lib-shared | Bin 1908 -> 0 bytes
+|  .../lib/shared/.shared.objs/byte/shared.cmi       | Bin 210 -> 0 bytes
+|  .../lib/shared/.shared.objs/byte/shared.cmo       | Bin 2106 -> 0 bytes
+|  .../lib/shared/.shared.objs/byte/shared.cmt       | Bin 2859 -> 0 bytes
+|  .../shared/.shared.objs/byte/shared__Events.cmi   | Bin 742 -> 0 bytes
+|  .../shared/.shared.objs/byte/shared__Events.cmti  | Bin 6511 -> 0 bytes
+|  .../lib/shared/.shared.objs/native/shared.cmx     | Bin 120 -> 0 bytes
+|  .../lib/shared/.shared.objs/native/shared.o       | Bin 944 -> 0 bytes
+|  .../shared/.shared.objs/native/shared__Events.cmx | Bin 217 -> 0 bytes
+|  .../shared/.shared.objs/native/shared__Events.o   | Bin 1008 -> 0 bytes
+|  .../.shared.objs/shared__Events.impl.all-deps     |   0
+|  .../lib/shared/.shared.objs/shared__Events.impl.d |   1 -
+|  .../.shared.objs/shared__Events.intf.all-deps     |   0
+|  .../lib/shared/.shared.objs/shared__Events.intf.d |   1 -
+|  _build/default/lib/shared/events.ml               |  17 --
+|  _build/default/lib/shared/events.mli              |  14 --
+|  _build/default/lib/shared/shared.a                | Bin 2720 -> 0 bytes
+|  _build/default/lib/shared/shared.cmxa             | Bin 315 -> 0 bytes
+|  _build/default/lib/shared/shared.ml-gen           |   4 -
+|  _build/install/default/bin/team_proj              |   1 -
+|  _build/log                                        |  16 --
+|  79 files changed, 1 insertion(+), 546 deletions(-)
+
+* f421b27 2025-11-19 15:17 EST added INSTALL.md| 
+|  INSTALL.md | 180 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|  1 file changed, 180 insertions(+)
+
+* e5e495b 2025-11-19 15:04 EST Implemented GUI connecting backend and frontend for UT| 
+|  _build/default/META.team_proj => .gitignore       |   0
+|  MS2 Submission/MS2Report.pdf                      |  13 +-
+|  _build/.db                                        | Bin 7000 -> 4101 bytes
+|  _build/.digest-db                                 | Bin 138380 -> 130655 bytes
+|  _build/default/.dune/configurator                 |   4 +-
+|  _build/default/.dune/configurator.v2              |   2 +-
+|  .../dune__exe___ppx.cmi                           | Bin 3703 -> 3703 bytes
+|  .../dune__exe___ppx.cmo                           | Bin 5711 -> 5711 bytes
+|  .../dune__exe___ppx.cmx                           | Bin 3728 -> 3728 bytes
+|  .../dune__exe___ppx.o                             | Bin 3448 -> 1824 bytes
+|  .../.ppx/ccbf65260e40183e83faa06e3f5579a2/ppx.exe | Bin 23937872 -> 16071192 bytes
+|  _build/default/README.md                          |  10 --
+|  .../bin/.main.eobjs/byte/dune__exe__Main.cmti     | Bin 3607 -> 3664 bytes
+|  .../bin/.main.eobjs/native/dune__exe__Main.cmx    | Bin 759 -> 1739 bytes
+|  .../bin/.main.eobjs/native/dune__exe__Main.o      | Bin 5648 -> 3624 bytes
+|  _build/default/bin/.merlin-conf/exe-main          | Bin 2296 -> 2359 bytes
+|  _build/default/bin/main.exe                       | Bin 5451552 -> 6594360 bytes
+|  _build/default/bin/main.ml                        |  31 +++--
+|  _build/default/bin/main.pp.ml                     | Bin 2949 -> 3473 bytes
+|  _build/default/lib/.merlin-conf/lib-team_proj     | Bin 1682 -> 0 bytes
+|  .../lib/.team_proj.objs/byte/team_proj.cmi        | Bin 121 -> 0 bytes
+|  .../lib/.team_proj.objs/byte/team_proj.cmo        | Bin 1936 -> 0 bytes
+|  .../lib/.team_proj.objs/byte/team_proj.cmt        | Bin 2377 -> 0 bytes
+|  .../lib/.team_proj.objs/native/team_proj.cmx      | Bin 108 -> 0 bytes
+|  .../lib/.team_proj.objs/native/team_proj.o        | Bin 1648 -> 0 bytes
+|  .../lib/backend/.backend.objs/backend.impl.d      |   2 +-
+|  .../lib/backend/.backend.objs/byte/backend.cmi    | Bin 3359 -> 3391 bytes
+|  .../lib/backend/.backend.objs/byte/backend.cmo    | Bin 25202 -> 26882 bytes
+|  .../lib/backend/.backend.objs/byte/backend.cmt    | Bin 69102 -> 76337 bytes
+|  .../lib/backend/.backend.objs/byte/backend__.cmt  | Bin 3468 -> 3471 bytes
+|  .../.backend.objs/byte/backend__Document.cmt      | Bin 38415 -> 38472 bytes
+|  .../lib/backend/.backend.objs/native/backend.cmx  | Bin 1324 -> 1419 bytes
+|  .../lib/backend/.backend.objs/native/backend.o    | Bin 27608 -> 22656 bytes
+|  .../lib/backend/.backend.objs/native/backend__.o  | Bin 3280 -> 1680 bytes
+|  .../.backend.objs/native/backend__Document.o      | Bin 12912 -> 8528 bytes
+|  .../default/lib/backend/.merlin-conf/lib-backend  | Bin 2279 -> 2333 bytes
+|  _build/default/lib/backend/backend.a              | Bin 46058 -> 37008 bytes
+|  _build/default/lib/backend/backend.cma            | Bin 40807 -> 0 bytes
+|  _build/default/lib/backend/backend.cmxa           | Bin 1961 -> 2056 bytes
+|  _build/default/lib/backend/backend.cmxs           | Bin 51528 -> 0 bytes
+|  _build/default/lib/backend/backend.ml             |  23 +++-
+|  .../lib/frontend/.frontend.objs/byte/frontend.cmi | Bin 191 -> 2370 bytes
+|  .../lib/frontend/.frontend.objs/byte/frontend.cmo | Bin 2024 -> 20312 bytes
+|  .../lib/frontend/.frontend.objs/byte/frontend.cmt | Bin 3210 -> 75062 bytes
+|  .../frontend/.frontend.objs/native/frontend.cmx   | Bin 178 -> 1292 bytes
+|  .../lib/frontend/.frontend.objs/native/frontend.o | Bin 1640 -> 16800 bytes
+|  .../lib/frontend/.merlin-conf/lib-frontend        | Bin 1753 -> 2284 bytes
+|  _build/default/lib/frontend/frontend.a            | Bin 1974 -> 18688 bytes
+|  _build/default/lib/frontend/frontend.cma          | Bin 2031 -> 0 bytes
+|  _build/default/lib/frontend/frontend.cmxa         | Bin 185 -> 1299 bytes
+|  _build/default/lib/frontend/frontend.cmxs         | Bin 16256 -> 0 bytes
+|  _build/default/lib/frontend/frontend.ml           | 137 ++++++++++++++++++++
+|  _build/default/lib/frontend/frontend.pp.ml        | Bin 0 -> 26767 bytes
+|  _build/default/lib/shared/.merlin-conf/lib-shared | Bin 1869 -> 1908 bytes
+|  .../lib/shared/.shared.objs/byte/shared.cmt       | Bin 2856 -> 2859 bytes
+|  .../shared/.shared.objs/byte/shared__Events.cmo   | Bin 2594 -> 0 bytes
+|  .../shared/.shared.objs/byte/shared__Events.cmt   | Bin 5358 -> 0 bytes
+|  .../shared/.shared.objs/byte/shared__Events.cmti  | Bin 6469 -> 6511 bytes
+|  .../lib/shared/.shared.objs/native/shared.o       | Bin 1624 -> 944 bytes
+|  .../shared/.shared.objs/native/shared__Events.o   | Bin 1688 -> 1008 bytes
+|  _build/default/lib/shared/shared.a                | Bin 4018 -> 2720 bytes
+|  _build/default/lib/shared/shared.cma              | Bin 4676 -> 0 bytes
+|  _build/default/lib/shared/shared.cmxs             | Bin 16888 -> 0 bytes
+|  .../spec_actions/.merlin-conf/lib-spec_actions    | Bin 1856 -> 0 bytes
+|  .../.spec_actions.objs/byte/spec_actions.cmi      | Bin 1066 -> 0 bytes
+|  .../.spec_actions.objs/byte/spec_actions.cmo      | Bin 19349 -> 0 bytes
+|  .../.spec_actions.objs/byte/spec_actions.cmt      | Bin 53460 -> 0 bytes
+|  .../.spec_actions.objs/byte/spec_actions.cmti     | Bin 7144 -> 0 bytes
+|  .../.spec_actions.objs/native/spec_actions.cmx    | Bin 895 -> 0 bytes
+|  .../.spec_actions.objs/native/spec_actions.o      | Bin 21544 -> 0 bytes
+|  _build/default/lib/spec_actions/spec_actions.a    | Bin 22224 -> 0 bytes
+|  _build/default/lib/spec_actions/spec_actions.cma  | Bin 19356 -> 0 bytes
+|  _build/default/lib/spec_actions/spec_actions.cmxa | Bin 902 -> 0 bytes
+|  _build/default/lib/spec_actions/spec_actions.cmxs | Bin 33488 -> 0 bytes
+|  _build/default/lib/spec_actions/spec_actions.ml   | 124 ------------------
+|  _build/default/lib/spec_actions/spec_actions.mli  |  15 ---
+|  _build/default/lib/team_proj.a                    | Bin 1990 -> 0 bytes
+|  _build/default/lib/team_proj.cma                  | Bin 1943 -> 0 bytes
+|  _build/default/lib/team_proj.cmxa                 | Bin 115 -> 0 bytes
+|  _build/default/lib/team_proj.cmxs                 | Bin 16192 -> 0 bytes
+|  _build/default/lib/team_proj.ml-gen               |   1 -
+|  _build/default/team_proj.dune-package             |   4 -
+|  _build/default/team_proj.install                  |  11 --
+|  _build/default/team_proj.opam                     |  32 -----
+|  .../default/test/.merlin-conf/exe-test_team_proj  | Bin 1389 -> 0 bytes
+|  .../byte/dune__exe__Test_team_proj.cmi            | Bin 225 -> 0 bytes
+|  .../byte/dune__exe__Test_team_proj.cmti           | Bin 2953 -> 0 bytes
+|  .../native/dune__exe__Test_team_proj.cmx          | Bin 212 -> 0 bytes
+|  .../native/dune__exe__Test_team_proj.o            | Bin 1776 -> 0 bytes
+|  _build/default/test/test_team_proj.exe            | Bin 3440392 -> 0 bytes
+|  _build/default/test/test_team_proj.ml             |   0
+|  _build/default/test/test_team_proj.mli            |   1 -
+|  _build/install/default/doc/team_proj/README.md    |   1 -
+|  _build/install/default/lib/team_proj/META         |   1 -
+|  _build/install/default/lib/team_proj/dune-package |   1 -
+|  _build/install/default/lib/team_proj/opam         |   1 -
+|  _build/log                                        |  20 +--
+|  bin/dune                                          |   2 +-
+|  bin/main.ml                                       |  31 +++--
+|  dune-project                                      |   4 +-
+|  lib/backend/backend.ml                            |  23 +++-
+|  lib/frontend/dune                                 |   6 +-
+|  lib/frontend/frontend.ml                          | 137 ++++++++++++++++++++
+|  team_proj.opam                                    |   1 +
+|  104 files changed, 383 insertions(+), 255 deletions(-)
+
+* 3c6986c 2025-11-19 01:34 EST done| 
+|  _build/.db                                        | Bin 7000 -> 7000 bytes
+|  _build/.digest-db                                 | Bin 138380 -> 138380 bytes
+|  .../backend/.backend.objs/backend.impl.all-deps   |   1 +
+|  .../lib/backend/.backend.objs/backend.impl.d      |   2 +-
+|  .../lib/backend/.backend.objs/byte/backend.cmi    | Bin 3769 -> 3359 bytes
+|  .../lib/backend/.backend.objs/byte/backend.cmo    | Bin 32087 -> 25202 bytes
+|  .../lib/backend/.backend.objs/byte/backend.cmt    | Bin 91026 -> 69102 bytes
+|  .../.backend.objs/byte/backend__Document.cmi      | Bin 1761 -> 1761 bytes
+|  .../.backend.objs/byte/backend__Document.cmo      | Bin 13222 -> 13211 bytes
+|  .../.backend.objs/byte/backend__Document.cmt      | Bin 38749 -> 38415 bytes
+|  .../lib/backend/.backend.objs/native/backend.cmx  | Bin 1265 -> 1324 bytes
+|  .../lib/backend/.backend.objs/native/backend.o    | Bin 32032 -> 27608 bytes
+|  .../.backend.objs/native/backend__Document.cmx    | Bin 558 -> 558 bytes
+|  .../.backend.objs/native/backend__Document.o      | Bin 12912 -> 12912 bytes
+|  _build/default/lib/backend/backend.a              | Bin 50598 -> 46058 bytes
+|  _build/default/lib/backend/backend.cma            | Bin 47703 -> 40807 bytes
+|  _build/default/lib/backend/backend.cmxa           | Bin 1902 -> 1961 bytes
+|  _build/default/lib/backend/backend.cmxs           | Bin 56936 -> 51528 bytes
+|  _build/default/lib/backend/backend.ml             | 107 ++++++--------------
+|  _build/default/lib/backend/document.ml            |  20 ++--
+|  _build/log                                        |   6 +-
+|  21 files changed, 42 insertions(+), 94 deletions(-)
+
+* 8dc481f 2025-11-19 01:29 EST minor changes| 
+|  MS2 Submission/MS2Report.pdf |  2 ++
+|  lib/backend/document.ml      | 18 ++++++------------
+|  2 files changed, 8 insertions(+), 12 deletions(-)
+
+* a28da71 2025-11-19 01:20 EST updated ms2report| 
+|  MS2 Submission/MS2Report.pdf | 12 ++++++++++--
+|  1 file changed, 10 insertions(+), 2 deletions(-)
+
+* d2099e7 2025-11-19 01:07 EST changes made to backend.ml in order to integrate the new module| 
+|  lib/backend/backend.ml | 77 ++++++++++++++++--------------------------------
+|  1 file changed, 25 insertions(+), 52 deletions(-)
+
+* 78d1f1f 2025-11-19 00:44 EST made document.ml and shifted  document update logic there| 
+|  _build/.db                                        | Bin 5964 -> 7000 bytes
+|  _build/.digest-db                                 | Bin 293726 -> 138380 bytes
+|  _build/default/.dune/configurator                 |   4 +-
+|  _build/default/.dune/configurator.v2              |   2 +-
+|  .../dune__exe___ppx.cmx                           | Bin 3728 -> 3728 bytes
+|  .../.ppx/ccbf65260e40183e83faa06e3f5579a2/ppx.exe | Bin 23937912 -> 23937872 bytes
+|  .../bin/.main.eobjs/byte/dune__exe__Main.cmti     | Bin 3740 -> 3607 bytes
+|  _build/default/bin/.merlin-conf/exe-main          | Bin 2359 -> 2296 bytes
+|  _build/default/bin/main.exe                       | Bin 5451624 -> 5451552 bytes
+|  _build/default/lib/.merlin-conf/lib-team_proj     | Bin 0 -> 1682 bytes
+|  .../lib/.team_proj.objs/byte/team_proj.cmi        | Bin 0 -> 121 bytes
+|  .../lib/.team_proj.objs/byte/team_proj.cmo        | Bin 0 -> 1936 bytes
+|  .../lib/.team_proj.objs/byte/team_proj.cmt        | Bin 0 -> 2377 bytes
+|  .../lib/.team_proj.objs/native/team_proj.cmx      | Bin 0 -> 108 bytes
+|  .../lib/.team_proj.objs/native/team_proj.o        | Bin 0 -> 1648 bytes
+|  .../backend/.backend.objs/backend.impl.all-deps   |   0
+|  .../lib/backend/.backend.objs/backend.impl.d      |   1 +
+|  .../.backend.objs/backend__Document.impl.all-deps |   0
+|  .../.backend.objs/backend__Document.impl.d        |   1 +
+|  .../lib/backend/.backend.objs/byte/backend.cmi    | Bin 3739 -> 3769 bytes
+|  .../lib/backend/.backend.objs/byte/backend.cmo    | Bin 32043 -> 32087 bytes
+|  .../lib/backend/.backend.objs/byte/backend.cmt    | Bin 91077 -> 91026 bytes
+|  .../lib/backend/.backend.objs/byte/backend__.cmi  | Bin 0 -> 404 bytes
+|  .../lib/backend/.backend.objs/byte/backend__.cmo  | Bin 0 -> 2453 bytes
+|  .../lib/backend/.backend.objs/byte/backend__.cmt  | Bin 0 -> 3468 bytes
+|  .../.backend.objs/byte/backend__Document.cmi      | Bin 0 -> 1761 bytes
+|  .../.backend.objs/byte/backend__Document.cmo      | Bin 0 -> 13222 bytes
+|  .../.backend.objs/byte/backend__Document.cmt      | Bin 0 -> 38749 bytes
+|  .../lib/backend/.backend.objs/native/backend.cmx  | Bin 1235 -> 1265 bytes
+|  .../lib/backend/.backend.objs/native/backend.o    | Bin 32032 -> 32032 bytes
+|  .../backend/.backend.objs/native/backend__.cmx    | Bin 0 -> 129 bytes
+|  .../lib/backend/.backend.objs/native/backend__.o  | Bin 0 -> 3280 bytes
+|  .../.backend.objs/native/backend__Document.cmx    | Bin 0 -> 558 bytes
+|  .../.backend.objs/native/backend__Document.o      | Bin 0 -> 12912 bytes
+|  .../default/lib/backend/.merlin-conf/lib-backend  | Bin 2098 -> 2279 bytes
+|  _build/default/lib/backend/backend.a              | Bin 33328 -> 50598 bytes
+|  _build/default/lib/backend/backend.cma            | Bin 32050 -> 47703 bytes
+|  _build/default/lib/backend/backend.cmxa           | Bin 1242 -> 1902 bytes
+|  _build/default/lib/backend/backend.cmxs           | Bin 42360 -> 56936 bytes
+|  _build/default/lib/backend/backend__.ml-gen       |   7 ++
+|  _build/default/lib/backend/document.ml            | 123 ++++++++++++++++++++
+|  .../lib/frontend/.frontend.objs/byte/frontend.cmt | Bin 3308 -> 3210 bytes
+|  .../lib/frontend/.merlin-conf/lib-frontend        | Bin 1796 -> 1753 bytes
+|  _build/default/lib/shared/.merlin-conf/lib-shared | Bin 1912 -> 1869 bytes
+|  .../lib/shared/.shared.objs/byte/shared.cmt       | Bin 2863 -> 2856 bytes
+|  .../shared/.shared.objs/byte/shared__Events.cmt   | Bin 5456 -> 5358 bytes
+|  .../shared/.shared.objs/byte/shared__Events.cmti  | Bin 6567 -> 6469 bytes
+|  .../spec_actions/.merlin-conf/lib-spec_actions    | Bin 2086 -> 1856 bytes
+|  .../.spec_actions.objs/byte/spec_actions.cmi      | Bin 3938 -> 1066 bytes
+|  .../.spec_actions.objs/byte/spec_actions.cmo      | Bin 19699 -> 19349 bytes
+|  .../.spec_actions.objs/byte/spec_actions.cmt      | Bin 59284 -> 53460 bytes
+|  .../.spec_actions.objs/byte/spec_actions.cmti     | Bin 0 -> 7144 bytes
+|  .../.spec_actions.objs/native/spec_actions.cmx    | Bin 895 -> 895 bytes
+|  .../.spec_actions.objs/native/spec_actions.o      | Bin 21480 -> 21544 bytes
+|  _build/default/lib/spec_actions/spec_actions.a    | Bin 22160 -> 22224 bytes
+|  _build/default/lib/spec_actions/spec_actions.cma  | Bin 19706 -> 19356 bytes
+|  _build/default/lib/spec_actions/spec_actions.cmxa | Bin 902 -> 902 bytes
+|  _build/default/lib/spec_actions/spec_actions.cmxs | Bin 33488 -> 33488 bytes
+|  _build/default/lib/spec_actions/spec_actions.ml   |  14 +--
+|  _build/default/lib/spec_actions/spec_actions.mli  |  15 +++
+|  _build/default/lib/team_proj.a                    | Bin 0 -> 1990 bytes
+|  _build/default/lib/team_proj.cma                  | Bin 0 -> 1943 bytes
+|  _build/default/lib/team_proj.cmxa                 | Bin 0 -> 115 bytes
+|  _build/default/lib/team_proj.cmxs                 | Bin 0 -> 16192 bytes
+|  _build/default/lib/team_proj.ml-gen               |   1 +
+|  .../default/test/.merlin-conf/exe-test_team_proj  | Bin 1383 -> 1389 bytes
+|  .../byte/dune__exe__Test_team_proj.cmti           | Bin 3002 -> 2953 bytes
+|  _build/default/test/test_team_proj.exe            | Bin 3440416 -> 3440392 bytes
+|  _build/log                                        |  45 +++----
+|  lib/backend/backend.ml                            |  30 +----
+|  lib/backend/document.ml                           | 123 ++++++++++++++++++++
+|  lib/backend/dune                                  |   7 +-
+|  lib/spec_actions/dune                             |   6 +-
+|  73 files changed, 306 insertions(+), 73 deletions(-)
+
+* 0e5b345 2025-11-18 21:19 EST Done| 
+|  lib/backend/backend.ml | 1 -
+|  1 file changed, 1 deletion(-)
+
+* fef1189 2025-11-18 21:11 EST Taking a short break| 
+|  AUTHORS.md                        | 8 +++++++-
+|  lib/backend/backend.ml            | 1 +
+|  lib/backend/dune                  | 2 +-
+|  lib/dune                          | 3 +++
+|  lib/spec_actions/dune             | 2 +-
+|  lib/spec_actions/spec_actions.ml  | 2 ++
+|  lib/spec_actions/spec_actions.mli | 6 +++++-
+|  7 files changed, 20 insertions(+), 4 deletions(-)
+
+* 71d0613 2025-11-18 20:35 EST Touched up the report| 
+|  MS2 Submission/MS2Report.pdf | 26 ++++++++++++++++----------
+|  1 file changed, 16 insertions(+), 10 deletions(-)
+
+* ae37fab 2025-11-18 20:31 EST Renamed WS2 to MS2| 
+|  MS2 Submission/MS2Report.pdf |  9 ++++++++-
+|  WS2 Submission/MS2Report.pdf | 32 --------------------------------
+|  2 files changed, 8 insertions(+), 33 deletions(-)
+
+* a54706a 2025-11-18 20:29 EST Test| 
+|  MS2 Submission/MS2Report.pdf                      |  25 +++
+|  {WS2 Submission => MS2 Submission}/RepoURL.txt    |   0
+|  {WS2 Submission => MS2 Submission}/gallery.yaml   |   0
+|  _build/.db                                        | Bin 5612 -> 5964 bytes
+|  _build/.digest-db                                 | Bin 293305 -> 293726 bytes
+|  .../lib/backend/.backend.objs/byte/backend.cmi    | Bin 189 -> 3739 bytes
+|  .../lib/backend/.backend.objs/byte/backend.cmo    | Bin 2020 -> 32043 bytes
+|  .../lib/backend/.backend.objs/byte/backend.cmt    | Bin 3594 -> 91077 bytes
+|  .../lib/backend/.backend.objs/native/backend.cmx  | Bin 176 -> 1235 bytes
+|  .../lib/backend/.backend.objs/native/backend.o    | Bin 1632 -> 32032 bytes
+|  _build/default/lib/backend/backend.a              | Bin 1958 -> 33328 bytes
+|  _build/default/lib/backend/backend.cma            | Bin 2027 -> 32050 bytes
+|  _build/default/lib/backend/backend.cmxa           | Bin 183 -> 1242 bytes
+|  _build/default/lib/backend/backend.cmxs           | Bin 16248 -> 42360 bytes
+|  _build/default/lib/backend/backend.ml             | 227 ++++++++++++++++++++
+|  _build/default/lib/shared/.merlin-conf/lib-shared | Bin 1851 -> 1912 bytes
+|  .../shared/.shared.objs/byte/shared__Events.cmi   | Bin 230 -> 742 bytes
+|  .../shared/.shared.objs/byte/shared__Events.cmo   | Bin 2071 -> 2594 bytes
+|  .../shared/.shared.objs/byte/shared__Events.cmt   | Bin 3356 -> 5456 bytes
+|  .../shared/.shared.objs/byte/shared__Events.cmti  | Bin 0 -> 6567 bytes
+|  .../shared/.shared.objs/native/shared__Events.cmx | Bin 217 -> 217 bytes
+|  .../.shared.objs/shared__Events.intf.all-deps     |   0
+|  .../lib/shared/.shared.objs/shared__Events.intf.d |   1 +
+|  _build/default/lib/shared/events.ml               |  17 ++
+|  _build/default/lib/shared/events.mli              |  14 ++
+|  _build/default/lib/shared/shared.cma              | Bin 4153 -> 4676 bytes
+|  _build/default/lib/shared/shared.cmxa             | Bin 315 -> 315 bytes
+|  _build/default/lib/shared/shared.cmxs             | Bin 16888 -> 16888 bytes
+|  .../.spec_actions.objs/byte/spec_actions.cmi      | Bin 1889 -> 3938 bytes
+|  .../.spec_actions.objs/byte/spec_actions.cmo      | Bin 7158 -> 19699 bytes
+|  .../.spec_actions.objs/byte/spec_actions.cmt      | Bin 19935 -> 59284 bytes
+|  .../.spec_actions.objs/native/spec_actions.cmx    | Bin 846 -> 895 bytes
+|  .../.spec_actions.objs/native/spec_actions.o      | Bin 8072 -> 21480 bytes
+|  _build/default/lib/spec_actions/spec_actions.a    | Bin 8508 -> 22160 bytes
+|  _build/default/lib/spec_actions/spec_actions.cma  | Bin 7165 -> 19706 bytes
+|  _build/default/lib/spec_actions/spec_actions.cmxa | Bin 853 -> 902 bytes
+|  _build/default/lib/spec_actions/spec_actions.cmxs | Bin 20152 -> 33488 bytes
+|  _build/default/lib/spec_actions/spec_actions.ml   | 113 ++++++++--
+|  _build/log                                        |  20 +-
+|  lib/spec_actions/spec_actions.ml                  |  12 +-
+|  lib/spec_actions/spec_actions.mli                 |  11 +
+|  41 files changed, 416 insertions(+), 24 deletions(-)
+
+* c1bb9a3 2025-11-18 20:22 EST Update MS2Report.pdf| 
+|  WS2 Submission/MS2Report.pdf | 9 ++++++++-
+|  1 file changed, 8 insertions(+), 1 deletion(-)
+
+* 6567c92 2025-11-18 20:03 EST Implemented bold, italic, and deletion| 
+|  lib/spec_actions/spec_actions.ml | 106 +++++++++++++++++++++++++++++--------
+|  1 file changed, 85 insertions(+), 21 deletions(-)
+
+*   55d4b98 2025-11-18 16:39 EST Merge branch 'main' of github.coecis.cornell.edu:rl896/cs3110-project
+|\  
+| * 0dfd7d8 2025-11-17 23:16 EST Implement concurrent backend editing and shared events types| | 
+| |  lib/backend/backend.ml | 227 +++++++++++++++++++++++++++++++++++++++++++++
+| |  lib/shared/events.ml   |  17 ++++
+| |  lib/shared/events.mli  |  14 +++
+| |  3 files changed, 258 insertions(+)
+
+* | 0164d3e 2025-11-18 16:37 EST Working on deletion and bolding, so far only moving one char forward and back at a time, and can only apply edits at the end (functionality still WIP for now but will finish tonight)
+|/  |   
+|    WS2 Submission/MS2Report.pdf                     |  25 ++++++
+|    WS2 Submission/RepoURL.txt                       |   1 +
+|    WS2 Submission/gallery.yaml                      |  29 +++++++
+|    _build/.db                                       | Bin 5612 -> 5612 bytes
+|    _build/.digest-db                                | Bin 268626 -> 293305 bytes
+|    .../spec_actions/.merlin-conf/lib-spec_actions   | Bin 1833 -> 2086 bytes
+|    .../.spec_actions.objs/byte/spec_actions.cmi     | Bin 1637 -> 1889 bytes
+|    .../.spec_actions.objs/byte/spec_actions.cmo     | Bin 6366 -> 7158 bytes
+|    .../.spec_actions.objs/byte/spec_actions.cmt     | Bin 16289 -> 19935 bytes
+|    .../.spec_actions.objs/native/spec_actions.cmx   | Bin 846 -> 846 bytes
+|    .../.spec_actions.objs/native/spec_actions.o     | Bin 7664 -> 8072 bytes
+|    _build/default/lib/spec_actions/spec_actions.a   | Bin 8100 -> 8508 bytes
+|    _build/default/lib/spec_actions/spec_actions.cma | Bin 6373 -> 7165 bytes
+|    .../default/lib/spec_actions/spec_actions.cmxa   | Bin 853 -> 853 bytes
+|    .../default/lib/spec_actions/spec_actions.cmxs   | Bin 20016 -> 20152 bytes
+|    _build/default/lib/spec_actions/spec_actions.ml  |  34 +++++---
+|    _build/log                                       |   6 +-
+|    lib/spec_actions/dune                            |   2 +-
+|    lib/spec_actions/spec_actions.ml                 |  79 ++++++++++++++-----
+|    19 files changed, 142 insertions(+), 34 deletions(-)
+
+* e747aea 2025-11-17 20:15 EST Built some foundation for bolding strings and imported a bunch of fonts| 
+|  _build/.db                                        | Bin 5612 -> 5612 bytes
+|  _build/.digest-db                                 | Bin 268621 -> 268626 bytes
+|  .../.spec_actions.objs/byte/spec_actions.cmi      | Bin 199 -> 1637 bytes
+|  .../.spec_actions.objs/byte/spec_actions.cmo      | Bin 2040 -> 6366 bytes
+|  .../.spec_actions.objs/byte/spec_actions.cmt      | Bin 3349 -> 16289 bytes
+|  .../.spec_actions.objs/native/spec_actions.cmx    | Bin 186 -> 846 bytes
+|  .../.spec_actions.objs/native/spec_actions.o      | Bin 1672 -> 7664 bytes
+|  _build/default/lib/spec_actions/spec_actions.a    | Bin 2038 -> 8100 bytes
+|  _build/default/lib/spec_actions/spec_actions.cma  | Bin 2047 -> 6373 bytes
+|  _build/default/lib/spec_actions/spec_actions.cmxa | Bin 193 -> 853 bytes
+|  _build/default/lib/spec_actions/spec_actions.cmxs | Bin 16296 -> 20016 bytes
+|  _build/default/lib/spec_actions/spec_actions.ml   |  29 ++++++
+|  _build/log                                        |   7 +-
+|  lib/spec_actions/fonts/Zalando Sans Semi/OFL.txt  |  93 ++++++++++++++++++++
+|  .../Zalando Sans Semi/OFL.txt:Zone.Identifier     | Bin 0 -> 93 bytes
+|  .../fonts/Zalando Sans Semi/README.txt            |  79 +++++++++++++++++
+|  .../Zalando Sans Semi/README.txt:Zone.Identifier  | Bin 0 -> 93 bytes
+|  ...oSansSemiExpanded-Italic-VariableFont_wght.ttf | Bin 0 -> 129960 bytes
+|  ...d-Italic-VariableFont_wght.ttf:Zone.Identifier | Bin 0 -> 93 bytes
+|  .../ZalandoSansSemiExpanded-VariableFont_wght.ttf | Bin 0 -> 126352 bytes
+|  ...Expanded-VariableFont_wght.ttf:Zone.Identifier | Bin 0 -> 93 bytes
+|  .../static/ZalandoSansSemiExpanded-Black.ttf      | Bin 0 -> 65448 bytes
+|  ...andoSansSemiExpanded-Black.ttf:Zone.Identifier | Bin 0 -> 93 bytes
+|  .../ZalandoSansSemiExpanded-BlackItalic.ttf       | Bin 0 -> 67440 bytes
+|  ...nsSemiExpanded-BlackItalic.ttf:Zone.Identifier | Bin 0 -> 93 bytes
+|  .../static/ZalandoSansSemiExpanded-Bold.ttf       | Bin 0 -> 65440 bytes
+|  ...landoSansSemiExpanded-Bold.ttf:Zone.Identifier | Bin 0 -> 93 bytes
+|  .../static/ZalandoSansSemiExpanded-BoldItalic.ttf | Bin 0 -> 67392 bytes
+|  ...ansSemiExpanded-BoldItalic.ttf:Zone.Identifier | Bin 0 -> 93 bytes
+|  .../static/ZalandoSansSemiExpanded-ExtraBold.ttf  | Bin 0 -> 65528 bytes
+|  ...SansSemiExpanded-ExtraBold.ttf:Zone.Identifier | Bin 0 -> 93 bytes
+|  .../ZalandoSansSemiExpanded-ExtraBoldItalic.ttf   | Bin 0 -> 67528 bytes
+|  ...miExpanded-ExtraBoldItalic.ttf:Zone.Identifier | Bin 0 -> 93 bytes
+|  .../static/ZalandoSansSemiExpanded-ExtraLight.ttf | Bin 0 -> 65636 bytes
+|  ...ansSemiExpanded-ExtraLight.ttf:Zone.Identifier | Bin 0 -> 93 bytes
+|  .../ZalandoSansSemiExpanded-ExtraLightItalic.ttf  | Bin 0 -> 66680 bytes
+|  ...iExpanded-ExtraLightItalic.ttf:Zone.Identifier | Bin 0 -> 93 bytes
+|  .../static/ZalandoSansSemiExpanded-Italic.ttf     | Bin 0 -> 67488 bytes
+|  ...ndoSansSemiExpanded-Italic.ttf:Zone.Identifier | Bin 0 -> 93 bytes
+|  .../static/ZalandoSansSemiExpanded-Light.ttf      | Bin 0 -> 65760 bytes
+|  ...andoSansSemiExpanded-Light.ttf:Zone.Identifier | Bin 0 -> 93 bytes
+|  .../ZalandoSansSemiExpanded-LightItalic.ttf       | Bin 0 -> 67628 bytes
+|  ...nsSemiExpanded-LightItalic.ttf:Zone.Identifier | Bin 0 -> 93 bytes
+|  .../static/ZalandoSansSemiExpanded-Medium.ttf     | Bin 0 -> 65708 bytes
+|  ...ndoSansSemiExpanded-Medium.ttf:Zone.Identifier | Bin 0 -> 93 bytes
+|  .../ZalandoSansSemiExpanded-MediumItalic.ttf      | Bin 0 -> 67688 bytes
+|  ...sSemiExpanded-MediumItalic.ttf:Zone.Identifier | Bin 0 -> 93 bytes
+|  .../static/ZalandoSansSemiExpanded-Regular.ttf    | Bin 0 -> 65760 bytes
+|  ...doSansSemiExpanded-Regular.ttf:Zone.Identifier | Bin 0 -> 93 bytes
+|  .../static/ZalandoSansSemiExpanded-SemiBold.ttf   | Bin 0 -> 65520 bytes
+|  ...oSansSemiExpanded-SemiBold.ttf:Zone.Identifier | Bin 0 -> 93 bytes
+|  .../ZalandoSansSemiExpanded-SemiBoldItalic.ttf    | Bin 0 -> 67584 bytes
+|  ...emiExpanded-SemiBoldItalic.ttf:Zone.Identifier | Bin 0 -> 93 bytes
+|  lib/spec_actions/spec_actions.ml                  |  33 +++++--
+|  54 files changed, 232 insertions(+), 9 deletions(-)
+
+* b3d4adb 2025-11-17 19:06 EST Made a file for handling special actions| 
+|  _build/.db                                        | Bin 4958 -> 5612 bytes
+|  _build/.digest-db                                 | Bin 243404 -> 268621 bytes
+|  _build/default/.dune/configurator                 |   4 +--
+|  _build/default/.dune/configurator.v2              |   2 +-
+|  .../dune__exe___ppx.cmi                           | Bin 3703 -> 3703 bytes
+|  .../dune__exe___ppx.cmo                           | Bin 5711 -> 5711 bytes
+|  .../dune__exe___ppx.cmx                           | Bin 3728 -> 3728 bytes
+|  .../dune__exe___ppx.o                             | Bin 1816 -> 3448 bytes
+|  .../.ppx/ccbf65260e40183e83faa06e3f5579a2/ppx.exe | Bin 16071192 -> 23937912 bytes
+|  .../bin/.main.eobjs/byte/dune__exe__Main.cmti     | Bin 3664 -> 3740 bytes
+|  .../bin/.main.eobjs/native/dune__exe__Main.cmx    | Bin 0 -> 759 bytes
+|  .../bin/.main.eobjs/native/dune__exe__Main.o      | Bin 0 -> 5648 bytes
+|  _build/default/bin/.merlin-conf/exe-main          | Bin 2236 -> 2359 bytes
+|  _build/default/bin/main.exe                       | Bin 5402576 -> 5451624 bytes
+|  _build/default/bin/main.ml                        |   3 ++
+|  _build/default/bin/main.pp.ml                     | Bin 2480 -> 2949 bytes
+|  .../lib/backend/.backend.objs/byte/backend.cmt    | Bin 3518 -> 3594 bytes
+|  .../lib/backend/.backend.objs/native/backend.o    | Bin 952 -> 1632 bytes
+|  .../default/lib/backend/.merlin-conf/lib-backend  | Bin 1962 -> 2098 bytes
+|  _build/default/lib/backend/backend.a              | Bin 1368 -> 1958 bytes
+|  _build/default/lib/backend/backend.cmxs           | Bin 34208 -> 16248 bytes
+|  .../lib/frontend/.frontend.objs/byte/frontend.cmt | Bin 3252 -> 3308 bytes
+|  .../lib/frontend/.frontend.objs/native/frontend.o | Bin 960 -> 1640 bytes
+|  .../lib/frontend/.merlin-conf/lib-frontend        | Bin 1680 -> 1796 bytes
+|  _build/default/lib/frontend/frontend.a            | Bin 1384 -> 1974 bytes
+|  _build/default/lib/frontend/frontend.cmxs         | Bin 34224 -> 16256 bytes
+|  _build/default/lib/shared/.merlin-conf/lib-shared | Bin 1735 -> 1851 bytes
+|  .../lib/shared/.shared.objs/byte/shared.cmt       | Bin 2859 -> 2863 bytes
+|  .../shared/.shared.objs/byte/shared__Events.cmt   | Bin 3300 -> 3356 bytes
+|  .../lib/shared/.shared.objs/native/shared.o       | Bin 944 -> 1624 bytes
+|  .../shared/.shared.objs/native/shared__Events.o   | Bin 1008 -> 1688 bytes
+|  _build/default/lib/shared/shared.a                | Bin 2720 -> 4018 bytes
+|  _build/default/lib/shared/shared.cmxs             | Bin 34696 -> 16888 bytes
+|  .../spec_actions/.merlin-conf/lib-spec_actions    | Bin 0 -> 1833 bytes
+|  .../.spec_actions.objs/byte/spec_actions.cmi      | Bin 0 -> 199 bytes
+|  .../.spec_actions.objs/byte/spec_actions.cmo      | Bin 0 -> 2040 bytes
+|  .../.spec_actions.objs/byte/spec_actions.cmt      | Bin 0 -> 3349 bytes
+|  .../.spec_actions.objs/native/spec_actions.cmx    | Bin 0 -> 186 bytes
+|  .../.spec_actions.objs/native/spec_actions.o      | Bin 0 -> 1672 bytes
+|  _build/default/lib/spec_actions/spec_actions.a    | Bin 0 -> 2038 bytes
+|  _build/default/lib/spec_actions/spec_actions.cma  | Bin 0 -> 2047 bytes
+|  _build/default/lib/spec_actions/spec_actions.cmxa | Bin 0 -> 193 bytes
+|  _build/default/lib/spec_actions/spec_actions.cmxs | Bin 0 -> 16296 bytes
+|  _build/default/lib/spec_actions/spec_actions.ml   |   0
+|  .../default/test/.merlin-conf/exe-test_team_proj  | Bin 1009 -> 1383 bytes
+|  .../byte/dune__exe__Test_team_proj.cmti           | Bin 3033 -> 3002 bytes
+|  _build/log                                        |  30 +++-----------------
+|  bin/main.ml                                       |   3 ++
+|  lib/spec_actions/dune                             |   5 ++++
+|  lib/spec_actions/spec_actions.ml                  |  12 ++++++++
+|  test/dune                                         |   4 +--
+|  51 files changed, 32 insertions(+), 31 deletions(-)
+
+* faba2d6 2025-11-16 12:04 EST restructring encapsulation| 
+|  _build/.db                                        | Bin 2891 -> 4958 bytes
+|  _build/.digest-db                                 | Bin 115533 -> 243404 bytes
+|  _build/default/.dune/configurator                 |   4 +-
+|  _build/default/.dune/configurator.v2              |   2 +-
+|  .../dune__exe___ppx.cmi                           | Bin 3703 -> 3703 bytes
+|  .../dune__exe___ppx.cmo                           | Bin 5711 -> 5711 bytes
+|  .../dune__exe___ppx.cmx                           | Bin 3728 -> 3728 bytes
+|  .../dune__exe___ppx.o                             | Bin 3448 -> 1816 bytes
+|  .../.ppx/ccbf65260e40183e83faa06e3f5579a2/ppx.exe | Bin 23937912 -> 16071192 bytes
+|  .../bin/.main.eobjs/byte/dune__exe__Main.cmti     | Bin 3090 -> 3664 bytes
+|  .../bin/.main.eobjs/native/dune__exe__Main.cmx    | Bin 1284 -> 0 bytes
+|  .../bin/.main.eobjs/native/dune__exe__Main.o      | Bin 74360 -> 0 bytes
+|  _build/default/bin/.merlin-conf/exe-main          | Bin 1440 -> 2236 bytes
+|  _build/default/bin/main.ml                        | 158 +-------------------
+|  _build/default/bin/main.pp.ml                     | Bin 60047 -> 2480 bytes
+|  _build/default/lib/.merlin-conf/lib-team_proj     | Bin 821 -> 0 bytes
+|  .../lib/.team_proj.objs/byte/team_proj.cmi        | Bin 121 -> 0 bytes
+|  .../lib/.team_proj.objs/byte/team_proj.cmo        | Bin 1936 -> 0 bytes
+|  .../lib/.team_proj.objs/byte/team_proj.cmt        | Bin 2384 -> 0 bytes
+|  .../lib/.team_proj.objs/native/team_proj.cmx      | Bin 108 -> 0 bytes
+|  .../lib/.team_proj.objs/native/team_proj.o        | Bin 1648 -> 0 bytes
+|  .../lib/backend/.backend.objs/byte/backend.cmi    | Bin 0 -> 189 bytes
+|  .../lib/backend/.backend.objs/byte/backend.cmo    | Bin 0 -> 2020 bytes
+|  .../lib/backend/.backend.objs/byte/backend.cmt    | Bin 0 -> 3518 bytes
+|  .../lib/backend/.backend.objs/native/backend.cmx  | Bin 0 -> 176 bytes
+|  .../lib/backend/.backend.objs/native/backend.o    | Bin 0 -> 952 bytes
+|  .../default/lib/backend/.merlin-conf/lib-backend  | Bin 0 -> 1962 bytes
+|  _build/default/lib/backend/backend.a              | Bin 0 -> 1368 bytes
+|  _build/default/lib/backend/backend.cma            | Bin 0 -> 2027 bytes
+|  _build/default/lib/backend/backend.cmxa           | Bin 0 -> 183 bytes
+|  _build/default/lib/backend/backend.cmxs           | Bin 0 -> 34208 bytes
+|  _build/default/lib/backend/backend.ml             |   0
+|  .../lib/frontend/.frontend.objs/byte/frontend.cmi | Bin 0 -> 191 bytes
+|  .../lib/frontend/.frontend.objs/byte/frontend.cmo | Bin 0 -> 2024 bytes
+|  .../lib/frontend/.frontend.objs/byte/frontend.cmt | Bin 0 -> 3252 bytes
+|  .../frontend/.frontend.objs/native/frontend.cmx   | Bin 0 -> 178 bytes
+|  .../lib/frontend/.frontend.objs/native/frontend.o | Bin 0 -> 960 bytes
+|  .../lib/frontend/.merlin-conf/lib-frontend        | Bin 0 -> 1680 bytes
+|  _build/default/lib/frontend/frontend.a            | Bin 0 -> 1384 bytes
+|  _build/default/lib/frontend/frontend.cma          | Bin 0 -> 2031 bytes
+|  _build/default/lib/frontend/frontend.cmxa         | Bin 0 -> 185 bytes
+|  _build/default/lib/frontend/frontend.cmxs         | Bin 0 -> 34224 bytes
+|  _build/default/lib/frontend/frontend.ml           |   0
+|  _build/default/lib/shared/.merlin-conf/lib-shared | Bin 0 -> 1735 bytes
+|  .../lib/shared/.shared.objs/byte/shared.cmi       | Bin 0 -> 210 bytes
+|  .../lib/shared/.shared.objs/byte/shared.cmo       | Bin 0 -> 2106 bytes
+|  .../lib/shared/.shared.objs/byte/shared.cmt       | Bin 0 -> 2859 bytes
+|  .../shared/.shared.objs/byte/shared__Events.cmi   | Bin 0 -> 230 bytes
+|  .../shared/.shared.objs/byte/shared__Events.cmo   | Bin 0 -> 2071 bytes
+|  .../shared/.shared.objs/byte/shared__Events.cmt   | Bin 0 -> 3300 bytes
+|  .../lib/shared/.shared.objs/native/shared.cmx     | Bin 0 -> 120 bytes
+|  .../lib/shared/.shared.objs/native/shared.o       | Bin 0 -> 944 bytes
+|  .../shared/.shared.objs/native/shared__Events.cmx | Bin 0 -> 217 bytes
+|  .../shared/.shared.objs/native/shared__Events.o   | Bin 0 -> 1008 bytes
+|  .../.shared.objs/shared__Events.impl.all-deps     |   0
+|  .../lib/shared/.shared.objs/shared__Events.impl.d |   1 +
+|  _build/default/lib/shared/events.ml               |   0
+|  _build/default/lib/shared/shared.a                | Bin 0 -> 2720 bytes
+|  _build/default/lib/shared/shared.cma              | Bin 0 -> 4153 bytes
+|  _build/default/lib/shared/shared.cmxa             | Bin 0 -> 315 bytes
+|  _build/default/lib/shared/shared.cmxs             | Bin 0 -> 34696 bytes
+|  _build/default/lib/shared/shared.ml-gen           |   4 +
+|  _build/default/lib/team_proj.a                    | Bin 1990 -> 0 bytes
+|  _build/default/lib/team_proj.cma                  | Bin 1943 -> 0 bytes
+|  _build/default/lib/team_proj.cmxa                 | Bin 115 -> 0 bytes
+|  _build/default/lib/team_proj.cmxs                 | Bin 16192 -> 0 bytes
+|  _build/default/lib/team_proj.ml-gen               |   1 -
+|  .../default/test/.merlin-conf/exe-test_team_proj  | Bin 1243 -> 1009 bytes
+|  _build/log                                        |  33 +++-
+|  bin/dune                                          |   2 +-
+|  lib/backend/backend.ml                            |   0
+|  lib/backend/dune                                  |   6 +
+|  lib/dune                                          |   2 -
+|  lib/frontend/dune                                 |   5 +
+|  lib/frontend/frontend.ml                          |   0
+|  lib/shared/dune                                   |   3 +
+|  lib/shared/events.ml                              |   0
+|  77 files changed, 52 insertions(+), 169 deletions(-)
+
+* fc29c37 2025-11-16 11:37 EST Code Start| 
+|  bin/main.ml | 158 ++--------------------------------------------------------
+|  1 file changed, 3 insertions(+), 155 deletions(-)
+
+* d829127 2025-11-16 11:30 EST Changed dune files| 
+|  _build/.db                                        | Bin 1938 -> 2891 bytes
+|  _build/.digest-db                                 | Bin 3325 -> 115533 bytes
+|  _build/.sandbox/.hg/requires                      |   1 +
+|  .../ccbf65260e40183e83faa06e3f5579a2/_ppx.ml-gen  |   1 +
+|  .../dune__exe___ppx.cmi                           | Bin 0 -> 3703 bytes
+|  .../dune__exe___ppx.cmo                           | Bin 0 -> 5711 bytes
+|  .../dune__exe___ppx.cmx                           | Bin 0 -> 3728 bytes
+|  .../dune__exe___ppx.o                             | Bin 0 -> 3448 bytes
+|  .../.ppx/ccbf65260e40183e83faa06e3f5579a2/ppx.exe | Bin 0 -> 23937912 bytes
+|  _build/default/README.md                          |  10 ++
+|  .../bin/.main.eobjs/byte/dune__exe__Main.cmti     | Bin 2669 -> 3090 bytes
+|  .../bin/.main.eobjs/native/dune__exe__Main.cmx    | Bin 219 -> 1284 bytes
+|  .../bin/.main.eobjs/native/dune__exe__Main.o      | Bin 3464 -> 74360 bytes
+|  _build/default/bin/.merlin-conf/exe-main          | Bin 871 -> 1440 bytes
+|  _build/default/bin/main.exe                       | Bin 1702600 -> 5402576 bytes
+|  _build/default/bin/main.ml                        | 163 +++++++++++++++++++-
+|  _build/default/bin/main.pp.ml                     | Bin 0 -> 60047 bytes
+|  _build/default/bin/{main.mli => main.pp.mli}      |   0
+|  _build/default/team_proj.dune-package             |   4 +-
+|  _build/default/team_proj.install                  |   3 +
+|  .../default/test/.merlin-conf/exe-test_team_proj  | Bin 899 -> 1243 bytes
+|  .../byte/dune__exe__Test_team_proj.cmi            | Bin 0 -> 225 bytes
+|  .../byte/dune__exe__Test_team_proj.cmti           | Bin 0 -> 3033 bytes
+|  .../native/dune__exe__Test_team_proj.cmx          | Bin 0 -> 212 bytes
+|  .../native/dune__exe__Test_team_proj.o            | Bin 0 -> 1776 bytes
+|  _build/default/test/test_team_proj.exe            | Bin 0 -> 3440416 bytes
+|  _build/install/default/doc/team_proj/README.md    |   1 +
+|  _build/log                                        |  14 +-
+|  test/dune                                         |   4 +-
+|  29 files changed, 186 insertions(+), 15 deletions(-)
+
+* c4c7243 2025-11-16 10:49 EST Added coded from a4 to build upon concurrency| 
+|  bin/dune    |   3 +-
+|  bin/main.ml | 163 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+|  2 files changed, 164 insertions(+), 2 deletions(-)
+
+* a4ddbb2 2025-10-30 19:13 EDT Update README.md| 
+|  README.md | 7 +++++--
+|  1 file changed, 5 insertions(+), 2 deletions(-)
+
+* 3780e0d 2025-10-30 19:12 EDT Update README.md| 
+|  README.md | 22 ++--------------------
+|  1 file changed, 2 insertions(+), 20 deletions(-)
+
+* d4d41f5 2025-10-29 17:20 EDT Update README.md| 
+|  README.md | 22 ++++++++++++++++++++++
+|  1 file changed, 22 insertions(+)
+
+* 9408a60 2025-10-29 11:31 EDT Update README.md - Jacob| 
+|  README.md | 2 ++
+|  1 file changed, 2 insertions(+)
+
+* ca93c18 2025-10-29 11:29 EDT Setup files made| 
+|  .ocamlformat                                      |   6 ++++
+|  AUTHORS.md                                        |   4 +++
+|  _build/.db                                        | Bin 0 -> 1938 bytes
+|  _build/.digest-db                                 | Bin 0 -> 3325 bytes
+|  _build/.filesystem-clock                          |   1 +
+|  _build/.lock                                      |   0
+|  _build/default/.dune/configurator                 |   2 ++
+|  _build/default/.dune/configurator.v2              |   1 +
+|  _build/default/META.team_proj                     |   0
+|  .../bin/.main.eobjs/byte/dune__exe__Main.cmi      | Bin 0 -> 205 bytes
+|  .../bin/.main.eobjs/byte/dune__exe__Main.cmti     | Bin 0 -> 2669 bytes
+|  .../bin/.main.eobjs/native/dune__exe__Main.cmx    | Bin 0 -> 219 bytes
+|  .../bin/.main.eobjs/native/dune__exe__Main.o      | Bin 0 -> 3464 bytes
+|  _build/default/bin/.merlin-conf/exe-main          | Bin 0 -> 871 bytes
+|  _build/default/bin/main.exe                       | Bin 0 -> 1702600 bytes
+|  _build/default/bin/main.ml                        |   1 +
+|  _build/default/bin/main.mli                       |   1 +
+|  _build/default/lib/.merlin-conf/lib-team_proj     | Bin 0 -> 821 bytes
+|  .../lib/.team_proj.objs/byte/team_proj.cmi        | Bin 0 -> 121 bytes
+|  .../lib/.team_proj.objs/byte/team_proj.cmo        | Bin 0 -> 1936 bytes
+|  .../lib/.team_proj.objs/byte/team_proj.cmt        | Bin 0 -> 2384 bytes
+|  .../lib/.team_proj.objs/native/team_proj.cmx      | Bin 0 -> 108 bytes
+|  .../lib/.team_proj.objs/native/team_proj.o        | Bin 0 -> 1648 bytes
+|  _build/default/lib/team_proj.a                    | Bin 0 -> 1990 bytes
+|  _build/default/lib/team_proj.cma                  | Bin 0 -> 1943 bytes
+|  _build/default/lib/team_proj.cmxa                 | Bin 0 -> 115 bytes
+|  _build/default/lib/team_proj.cmxs                 | Bin 0 -> 16192 bytes
+|  _build/default/lib/team_proj.ml-gen               |   1 +
+|  _build/default/team_proj.dune-package             |   4 +++
+|  _build/default/team_proj.install                  |   8 +++++
+|  _build/default/team_proj.opam                     |  32 ++++++++++++++++++++
+|  .../default/test/.merlin-conf/exe-test_team_proj  | Bin 0 -> 899 bytes
+|  _build/default/test/test_team_proj.ml             |   0
+|  _build/default/test/test_team_proj.mli            |   1 +
+|  _build/install/default/bin/team_proj              |   1 +
+|  _build/install/default/lib/team_proj/META         |   1 +
+|  _build/install/default/lib/team_proj/dune-package |   1 +
+|  _build/install/default/lib/team_proj/opam         |   1 +
+|  _build/log                                        |  25 +++++++++++++++
+|  bin/dune                                          |   4 +++
+|  bin/main.ml                                       |   1 +
+|  dune                                              |   1 +
+|  dune-project                                      |  26 ++++++++++++++++
+|  lib/dune                                          |   2 ++
+|  team_proj.opam                                    |  32 ++++++++++++++++++++
+|  test/dune                                         |   8 +++++
+|  test/test_team_proj.ml                            |   0
+|  47 files changed, 165 insertions(+)
+
+* 3f5d67c 2025-10-29 11:28 EDT first commit  
+   README.md | 1 +
+   1 file changed, 1 insertion(+)

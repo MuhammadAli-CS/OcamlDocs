@@ -1,0 +1,5 @@
+(library
+ (name lib)
+ (libraries bogue)
+ (instrumentation
+  (backend bisect_ppx)))

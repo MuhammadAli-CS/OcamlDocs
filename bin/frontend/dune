@@ -1,0 +1,10 @@
+(library
+ (name frontend)
+ (libraries
+  bogue
+  lwt
+  lwt.unix
+  threads.posix
+  shared
+)
+ (preprocess (pps lwt_ppx))) ; Depends on shared event types

@@ -1,0 +1,29 @@
+---
+# Members of your group.
+group:  Kellog's Cornflakes
+  - name: Ratchaphon Lertdamrongwong
+    netid: rl896
+  - name: Jacob Kupperman
+    netid: jak562
+  - name: Muhammad Ali
+    netid: ma2379
+  - name: Stanley Amkhanitsky
+    netid: sda62
+
+# Your PM.
+pm:
+  name: Jade Lee
+  netid: yl3873
+# Set to false if you don't want your gallery entry to be public.
+publish: false
+# Pithy title
+title: "Online Text Editor"
+# OK if this is a Cornell Github link, but public gallery viewers won't be able to see it.
+git-repo: "https://github.coecis.cornell.edu/rl896/cs3110-project"
+# Replace the URL with your own demo video.
+demo-video-url: "https://youtu.be/B1NKA9MFoCo"
+# Write a short, attention-grabbing description of your project.
+desc: >
+  Our project is an online text editor. It can handle bolding and italicizing of text. 
+  In addition, it has a GUI interface for users to appreciate. It can connect to a server 
+  as well which handles the special actions according to client inputs.

@@ -1,0 +1,7 @@
+(library
+ (name backend)
+ (libraries lwt lwt.unix shared)
+ (instrumentation
+  (backend bisect_ppx)))
+
+; Depends on shared event types

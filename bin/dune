@@ -1,0 +1,11 @@
+(executable
+ (public_name client)
+ (name main)
+ (libraries frontend backend bogue)
+ (preprocess
+  (pps lwt_ppx)))
+
+(executable
+ (public_name server)
+ (name run_server)
+ (libraries lib backend lwt lwt.unix))
