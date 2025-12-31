@@ -16,7 +16,7 @@ Robust Networking: Built on Lwt for asynchronous, non-blocking TCP communication
 
 Graphical Interface: Custom UI built using the Bogue library.
 
-🛠 Architecture
+### 🛠 Architecture
 
 The project follows a strict Client-Server architecture with a modular codebase designed for testability.
 
@@ -34,7 +34,7 @@ Model-View Separation: Text data is stored with its style attributes (Model) sep
 
 Input Polling: A high-frequency polling loop detects changes in the text input field to simulate a "live typing" experience.
 
-📦 Requirements
+### 📦 Requirements
 
 OCaml (4.14.0 or later)
 
@@ -50,7 +50,7 @@ ounit2 (Testing)
 
 bisect_ppx (Code Coverage)
 
-🚀 Getting Started
+# 🚀 Getting Started
 
 1. Build the Project
 
@@ -79,7 +79,7 @@ dune exec client
 
 You can open multiple terminals and run multiple clients to test collaboration.
 
-🧪 Testing & Coverage
+# 🧪 Testing & Coverage
 
 We prioritize stability in our synchronization logic. The project includes a comprehensive test suite targeting the backend logic, protocol parsing, and cursor mathematics.
 
@@ -99,7 +99,7 @@ bisect-ppx-report html
 
 Open _coverage/index.html to view the report.
 
-📂 Project Structure
+### 📂 Project Structure
 
 ├── bin/
 │   ├── main.ml         # Client Entry Point (GUI)
@@ -116,7 +116,7 @@ Open _coverage/index.html to view the report.
 └── data/                 # Storage for saved documents
 
 
-👥 Contributors
+# 👥 Contributors
 
 Muhammad Ali: Backend Architecture, Synchronization Logic (OT), Persistence, Testing Infrastructure.
 
