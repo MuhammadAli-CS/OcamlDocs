@@ -2,7 +2,7 @@
 
 A real-time, multi-threaded collaborative text editor built in OCaml. This application allows multiple users to connect to a central server, edit a shared document simultaneously with live character updates, and see the cursor positions of other users in real-time.
 
-🚀 Features
+## 🚀 Features
 
 Real-Time Collaboration: Character-by-character updates are broadcast immediately to all connected clients.
 
